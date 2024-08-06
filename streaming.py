@@ -1,5 +1,5 @@
 from transformers.agents.agent_types import AgentAudio, AgentImage, AgentText, AgentType
-from transformers.agents import ReactAgent,CodeAgent
+from transformers.agents import CodeAgent
 import spaces
 
 

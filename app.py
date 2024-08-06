@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Aug  1 19:04:11 2024
-
-@author: rkram
-"""
-
 import os
 import gradio as gr
 from transformers import HfEngine, Tool,CodeAgent,load_tool
@@ -58,7 +51,10 @@ with gr.Blocks(
         secondary_hue=gr.themes.colors.yellow,
     )
 ) as demo:
-    gr.Markdown("""# Image Generator""")
+    gr.Markdown("""# Image Generator (CodeAgent) 🖼️ 
+                
+**Runwayml/stable-diffusion-v1-5 w/Gradio prompt generator tool.**
+""")
     chatbot = gr.Chatbot(
         label="ImageBot",
         type="messages",
@@ -71,14 +67,6 @@ with gr.Blocks(
         label="What image would you like to generate?"
     )
     submit = gr.Button("Run", variant="primary")
-    
-    # gr.Examples(
-    #     examples=[["./example/titanic.csv", example_notes]],
-    #     inputs=[file_input, text_input],
-    #     cache_examples=False,
-    #     label='Click anywhere below to try this example.'
-    # )
-
     submit.click(interact_with_agent, [text_input], [chatbot])
 
 if __name__ == "__main__":
