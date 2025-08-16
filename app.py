@@ -53,7 +53,8 @@ with gr.Blocks(
 ) as demo:
     gr.Markdown("""# Image Generator (CodeAgent) 🖼️ 
                 
-**Runwayml/stable-diffusion-v1-5 w/Gradio prompt generator tool.**
+I am an image generating Code Agent powered by Llama-3.3-70B-Instruct model. 
+I come with two main tools, Gradio's Stable Diffusion prompt generator and an image generator powered by Runway's stable-diffusion-v1-5.
 """)
     chatbot = gr.Chatbot(
         label="ImageBot",
