@@ -11,7 +11,7 @@ from huggingface_hub import login
 #login
 login(os.getenv("HUGGINGFACEHUB_API_TOKEN"))
 #define llm engine
-llm_engine = HfEngine("meta-llama/Meta-Llama-3.1-70B-Instruct")
+llm_engine = HfEngine("meta-llama/Llama-3.3-70B-Instruct")
 #load tools
 image_gen_tool = load_tool("huggingface-tools/text-to-image")
 gradio_pg_tool = StableDiffusionPromptGeneratorTool()
